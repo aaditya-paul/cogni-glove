@@ -25,7 +25,7 @@ function NavBar() {
               />
             </div>
           </div>
-          <div className=" font-bold md:text-xl text-md">Cogni Glove</div>
+          <div className=" font-bold md:text-xl text-xl">Cogni Glove</div>
         </div>
       </Link>
       {/* Other Routes */}

@@ -16,10 +16,10 @@ function HeroSection() {
           <div className=" md:absolute hidden  bg-gradient-to-b from-transparent rounded-xl to-[#00000059] w-full"></div>
         </div>
         <div className=" md:absolute md:w-[60vw] w-full  flex-wrap text-wrap lg:top-[45%] md:top-[20%] top-[35%] lg:left-[18%] md:left-[19%]  ">
-          <div className=" text-black md:text-white font-bold my-3  lg:text-4xl md:text-3xl text-2xl">
+          <div className=" text-black md:text-white font-bold mt-8  mb-6 lg:text-4xl md:text-3xl text-2xl">
             The Glove That Knows
           </div>
-          <div className=" text-black md:text-white w-full  lg:text-lg md:text-1xl text-sm">
+          <div className=" text-black md:text-white w-full  lg:text-lg md:text-1xl text-xl">
             The Cogni Glove AI hand gesture recognition glove is the first of
             its kind. It&apos;s like having a keyboard on your fingertips. It
             can be used to control drones, robots, and other devices, as well as

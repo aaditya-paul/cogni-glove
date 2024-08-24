@@ -17,7 +17,7 @@ function FeatureCards({data}) {
                   <Image src={e.img} alt={e.title} fill />
                 </div>
               </div>
-              <div className=" font-bold md:text-xl text-xl">{e.title}</div>
+              <div className=" font-bold md:text-xl text-lg">{e.title}</div>
               <div className=" md:text-md text-xs">{e.bio}</div>
             </div>
           );

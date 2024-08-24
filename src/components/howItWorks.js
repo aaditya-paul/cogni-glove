@@ -18,8 +18,8 @@ function HowItWorks() {
             />
           </div>
           <div className=" flex flex-col gap-1 leading-5 my-5">
-            <div className=" font-bold">Step 1: Wear the glove</div>
-            <div>Put on the gesture recognition Cogni Glove </div>
+            <div className=" font-bold text-xl">Step 1: Wear the glove</div>
+            <div className=" ">Put on the gesture recognition Cogni Glove </div>
           </div>
         </div>
         {/* ... */}
@@ -33,7 +33,7 @@ function HowItWorks() {
             />
           </div>
           <div className=" flex flex-col gap-1 leading-5 my-5">
-            <div className=" font-bold">Step 2: Connect to Devices</div>
+            <div className=" font-bold text-xl">Step 2: Connect to Devices</div>
             <div>Connect to drones, robots, VR systems, and more </div>
           </div>
         </div>
@@ -48,7 +48,9 @@ function HowItWorks() {
             />
           </div>
           <div className=" flex flex-col gap-1 leading-5 my-5">
-            <div className=" font-bold">Step 3: Control with Gestures</div>
+            <div className=" font-bold text-xl">
+              Step 3: Control with Gestures
+            </div>
             <div>
               Use hand gestures to control devices and interact with stuff.
             </div>

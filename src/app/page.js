@@ -12,7 +12,9 @@ function Page() {
       <div className=" lg:px-[15%] md:px-32 px-8 py-12">
         <HeroSection />
         <KeySections />
-        <HowItWorks />
+        <div className=" mt-8 mb-6">
+          <HowItWorks />
+        </div>
         <Footer />
       </div>
     </div>
