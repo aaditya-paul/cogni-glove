@@ -3,6 +3,7 @@ import HeroSection from "@/components/heroSection";
 import HowItWorks from "@/components/howItWorks";
 import KeySections from "@/components/keySections";
 import NavBar from "@/components/navBar";
+import Link from "next/link";
 import React from "react";
 
 function Page() {

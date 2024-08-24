@@ -1,10 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import Step1 from "../../public/assets/step1.jpg";
+import Link from "next/link";
 function HowItWorks() {
   return (
     <div>
-      <div className=" font-bold text-3xl my-5 ">How It Works</div>
+      {/* <Link href={"#HowItWorks"}> */}
+      <div className=" font-bold text-3xl my-5 " id="HowItWorks">
+        How It Works
+      </div>
+      {/* </Link> */}
       {/* cards */}
       <div className=" self-center  grid lg:grid-rows-1 lg:grid-cols-3 md:grid-rows-2 md:grid-cols-2 grid-rows-3 grid-cols-1 md:text-left md:justify-normal text-center justify-center  gap-5">
         {/* ... */}

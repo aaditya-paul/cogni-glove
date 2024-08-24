@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import BannerImg from "../../public/assets/banner.png";
+import Link from "next/link";
 function HeroSection() {
   return (
     <div className="">
       <div>
         {/* banner */}
-        <div className=" relative  rounded-xl shadow-lg  md:w-[70vw] w-full lg:h-[65vh] md:h-[30vh] h-[20vh] ">
+        <div className=" relative  rounded-xl shadow-lg  md:w-[70vw] w-full lg:h-[65vh] md:h-[50vh] h-[25vh] ">
           <Image
             src={BannerImg}
             alt="Banner"
@@ -15,7 +16,7 @@ function HeroSection() {
           />
           <div className=" md:absolute hidden  bg-gradient-to-b from-transparent rounded-xl to-[#00000059] w-full"></div>
         </div>
-        <div className=" md:absolute md:w-[60vw] w-full  flex-wrap text-wrap lg:top-[45%] md:top-[20%] top-[35%] lg:left-[18%] md:left-[19%]  ">
+        <div className=" md:absolute md:w-[60vw] w-full  flex-wrap text-wrap lg:top-[40%] md:top-[22%] top-[35%] lg:left-[18%] md:left-[19%]  ">
           <div className=" text-black md:text-white font-bold mt-8  mb-6 lg:text-4xl md:text-3xl text-2xl">
             The Glove That Knows
           </div>
@@ -27,9 +28,11 @@ function HeroSection() {
             used to detect sign language, and it has applications in healthcare,
             manufacturing, and other industries.
           </div>
-          <div className=" shadow-md my-5 font-medium max-w-32 text-center bg-[#2094F3] px-5 py-3 rounded-lg cursor-pointer active:scale-95 transition-all ease-linear text-white">
-            Get Started
-          </div>
+          <Link href={"/demo"}>
+            <div className=" shadow-md my-5 font-medium max-w-32 text-center bg-[#2094F3] px-5 py-3 rounded-lg cursor-pointer active:scale-95 transition-all ease-linear text-white">
+              Get Started
+            </div>
+          </Link>
         </div>
       </div>
     </div>

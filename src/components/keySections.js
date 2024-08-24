@@ -43,7 +43,10 @@ function KeySections() {
     <div>
       {/* Key Features */}
       <div className="  lg:my-12">
-        <div className=" font-bold text-2xl mt-8 mb-6 ">Key Features</div>
+        <div id="KeyFeatures" className=" font-bold text-2xl mt-8 mb-6 ">
+          Key Features
+        </div>
+
         <div className=" text-xl ">
           The Cogni Glove AI hand gesture recognition glove is packed with
           advanced technology, making it the ultimate solution for hands-free

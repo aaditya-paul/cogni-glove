@@ -19,6 +19,11 @@
 body {
   color: black;
   background: white;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
