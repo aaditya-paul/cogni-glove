@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import HeroSection from "@/components/heroSection";
 import HowItWorks from "@/components/howItWorks";
 import KeySections from "@/components/keySections";
@@ -12,6 +13,7 @@ function Page() {
         <HeroSection />
         <KeySections />
         <HowItWorks />
+        <Footer />
       </div>
     </div>
   );
