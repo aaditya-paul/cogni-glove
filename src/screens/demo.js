@@ -4,14 +4,27 @@ import React, {useEffect, useState} from "react";
 
 // import Doc from "../../public/assets/medical store app.pdf";
 function Demo() {
-  useEffect(() => {
-    document.getElementById("content").scrollBy(0, 100);
+  const [data, setData] = useState(null);
 
-    function handleScroll() {
-      // Add your scroll handling logic here
-      console.log("Scrolling");
-    }
-  }, [5]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Add your condition checking logic here
+      fetch("http://localhost:3000/api/data")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(JSON.parse(JSON.stringify(data.dataRec.gesture_name)));
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+      // console.log("Checking condition");
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div className=" ">
       <div className=" font-medium text-3xl my-5 mb-9">
@@ -89,7 +102,14 @@ function Demo() {
           <div className="font-bold text-xl">Gemini AI</div>
           <div className="text-gray-500">Action 2</div>
           <div className="border-2 border-transparent border-b-gray-200 my-3"></div>
-          <div></div>
+          <div>
+            <h1>Data from API</h1>
+            {data ? (
+              <pre>{JSON.stringify(data, null, 2)}</pre>
+            ) : (
+              <p>Loading...</p>
+            )}
+          </div>
         </div>
         {/* <div className="border-2 border-gray-300 p-5 rounded-xl">
           <div className="font-bold text-xl">App 3</div>
