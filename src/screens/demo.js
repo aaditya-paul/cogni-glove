@@ -1,29 +1,39 @@
 "use client";
+import useWebSocket from "@/app/hooks/useWebSocket";
 import GestureButton from "@/components/gestureButton";
 import React, {useEffect, useState} from "react";
 
 // import Doc from "../../public/assets/medical store app.pdf";
 function Demo() {
-  const [data, setData] = useState(null);
-
+  const [inputMessage, setInputMessage] = useState("");
+  const {messages, sendMessage} = useWebSocket("ws://localhost:8080"); // Adjust the URL to match your WebSocket server
+  const [intent, setIntent] = useState("");
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Add your condition checking logic here
-      fetch("http://localhost:3000/api/data")
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(JSON.parse(JSON.stringify(data.dataRec.gesture_name)));
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-      // console.log("Checking condition");
-    }, 5000);
+    console.log(messages);
+    setIntent(messages);
+  }, [messages]);
+  const handleSendMessage = (msg) => {
+    sendMessage(msg);
+    // setInputMessage("");
+  };
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     // Add your condition checking logic here
+  //     fetch("http://localhost:3000/api/data")
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         console.log(JSON.parse(JSON.stringify(data.dataRec.gesture_name)));
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error:", error);
+  //       });
+  //     // console.log("Checking condition");
+  //   }, 5000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   return (
     <div className=" ">
@@ -35,7 +45,7 @@ function Demo() {
         &#9432; The intent recieved via the Glove will be highlighted
       </div>
       <div className=" my-5">
-        <GestureButton />
+        <GestureButton intent={intent} />
       </div>
       <div className="md:text-2xl text-lg font-medium">
         The actions performed in multiple apps according to the intent will be
@@ -103,12 +113,14 @@ function Demo() {
           <div className="text-gray-500">Action 2</div>
           <div className="border-2 border-transparent border-b-gray-200 my-3"></div>
           <div>
-            <h1>Data from API</h1>
-            {data ? (
-              <pre>{JSON.stringify(data, null, 2)}</pre>
-            ) : (
-              <p>Loading...</p>
-            )}
+            <div
+              onClick={() => {
+                // setInputMessage("open");
+                handleSendMessage("hihih");
+              }}
+            >
+              press
+            </div>
           </div>
         </div>
         {/* <div className="border-2 border-gray-300 p-5 rounded-xl">

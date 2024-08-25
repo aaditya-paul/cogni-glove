@@ -20,6 +20,8 @@
     "react-dom": "^18.3.1",
     "react-speech-recognition": "^3.10.0",
     "regenerator-runtime": "^0.14.1",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
     "ws": "^8.18.0"
   },
   "devDependencies": {

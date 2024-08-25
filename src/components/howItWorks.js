@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import Step1 from "../../public/assets/step1.jpg";
+import Step2 from "../../public/assets/connet.jpg";
+import Step3 from "../../public/assets/control.jpg";
 import Link from "next/link";
 function HowItWorks() {
   return (
@@ -31,8 +33,8 @@ function HowItWorks() {
         <div>
           <div className="  relative w-full md:w-72 h-72 shadow-md">
             <Image
-              src={Step1}
-              alt="Step1"
+              src={Step2}
+              alt="Step2"
               fill
               className=" hover:grayscale-0 hover:scale-105 transition-all ease cursor-pointer duration-300 lg:grayscale rounded-lg object-cover "
             />
@@ -46,8 +48,8 @@ function HowItWorks() {
         <div>
           <div className="  relative w-full md:w-72 h-72 shadow-md">
             <Image
-              src={Step1}
-              alt="Step1"
+              src={Step3}
+              alt="Step3"
               fill
               className=" hover:grayscale-0 hover:scale-105 transition-all ease cursor-pointer duration-300 lg:grayscale rounded-lg object-cover "
             />
